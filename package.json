@@ -1,11 +1,11 @@
 {
-  "name": "@swarmjs/mailjet",
+  "name": "@swarmjs/mail",
   "version": "1.0.0",
-  "description": "Mailjet plugin for SwarmJS",
+  "description": "HTML email generator for notifications",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/swarm-js/mailjet-plugin",
+  "repository": "https://github.com/swarm-js/mail-plugin",
   "license": "MIT",
   "keywords": [],
   "scripts": {
@@ -41,9 +41,7 @@
   "engines": {
     "node": ">=10"
   },
-  "dependencies": {
-    "node-mailjet": "^6.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@ava/typescript": "^1.1.1",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",

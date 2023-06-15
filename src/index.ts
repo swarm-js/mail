@@ -1,2 +1,3 @@
-export * from './lib/classes/MailjetPlugin'
-export * from './lib/interfaces/MailjetPluginOptions'
+export * from './lib/classes/Mail'
+export * from './lib/interfaces/MailAlertOptions'
+export * from './lib/interfaces/MailHeaderOptions'
