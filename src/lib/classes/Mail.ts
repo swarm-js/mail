@@ -5,15 +5,17 @@ export class Mail {
   blocks: string[]
   preview: string
   width: number
+  theme: string
 
-  constructor (preview: string, width: number = 600) {
+  constructor (preview: string, width = 600, theme = '#2e58ff') {
     this.width = width
     this.blocks = []
     this.preview = preview
+    this.theme = theme
   }
 
-  static create (preview: string, width: number = 600) {
-    return new Mail(preview, width)
+  static create (preview: string, width = 600, theme = '#2e58ff') {
+    return new Mail(preview, width, theme)
   }
 
   header (options: Partial<MailHeaderOptions>) {
@@ -345,8 +347,8 @@ export class Mail {
                         <td align="left" vertical-align="middle" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
                             <tbody><tr>
-                            <td align="center" bgcolor="#2e58ff" role="presentation" style="border:none;border-radius:30px;cursor:auto;mso-padding-alt:10px 25px;background:#2e58ff;" valign="middle">
-                                <a href="${url}" style="display: inline-block; background: #2e58ff; color: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 30px; margin: 0; text-decoration: none; text-transform: uppercase; padding: 10px 
+                            <td align="center" bgcolor="${this.theme}" role="presentation" style="border:none;border-radius:30px;cursor:auto;mso-padding-alt:10px 25px;background:${this.theme};" valign="middle">
+                                <a href="${url}" style="display: inline-block; background: ${this.theme}; color: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 30px; margin: 0; text-decoration: none; text-transform: uppercase; padding: 10px 
         25px; mso-padding-alt: 0px; border-radius: 30px;" target="_blank"> ${text} </a>
                             </td>
                             </tr>
